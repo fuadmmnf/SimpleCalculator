@@ -1,0 +1,71 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<VBox fx:controller="sample.Controller" spacing="7"
+      xmlns:fx="http://javafx.com/fxml" alignment="center" >
+    <fx:define>
+        <Font fx:id="FONT" size="15"/>
+    </fx:define>
+    <StackPane alignment="CENTER" VBox.vgrow="ALWAYS" >
+        <Rectangle fill="transparent" stroke="grey" />
+        <Label text="0" fx:id="output"/>
+    </StackPane>
+
+    <HBox spacing="10">
+        <HBox spacing="5">
+            <Button text="CE" font="$FONT" onAction="#OperatorPress" prefWidth="40"  prefHeight="30" style="-fx-background-color: lightgrey"/>
+            <Button text="/b" font="$FONT" onAction="#NumberPress" prefWidth="40"  prefHeight="30" style="-fx-background-color: lightgrey"/>
+            <Button text="Pi" font="$FONT" onAction="#NumberPress" prefWidth="40"  prefHeight="30" style="-fx-background-color: lightgrey"/>
+        </HBox>
+        <Button text="/" font="$FONT" onAction="#OperatorPress" prefWidth="40"  prefHeight="30" style="-fx-background-color:mediumaquamarine"/>
+
+    </HBox>
+
+    <HBox spacing="10">
+        <HBox spacing="5">
+            <Button text="7" font="$FONT" onAction="#NumberPress" prefWidth="40"  prefHeight="30" style="-fx-background-color: lightgrey"/>
+            <Button text="8" font="$FONT" onAction="#NumberPress" prefWidth="40"  prefHeight="30" style="-fx-background-color: lightgrey"/>
+            <Button text="9" font="$FONT" onAction="#NumberPress" prefWidth="40"  prefHeight="30" style="-fx-background-color: lightgrey"/>
+        </HBox>
+        <Button text="*" font="$FONT" onAction="#OperatorPress" prefWidth="40"  prefHeight="30" style="-fx-background-color:mediumaquamarine"/>
+
+    </HBox>
+
+    <HBox spacing="10">
+        <HBox spacing="5">
+        <Button text="4" font="$FONT" onAction="#NumberPress" prefWidth="40"  prefHeight="30" style="-fx-background-color: lightgrey"/>
+        <Button text="5" font="$FONT" onAction="#NumberPress" prefWidth="40"  prefHeight="30" style="-fx-background-color: lightgrey"/>
+        <Button text="6" font="$FONT" onAction="#NumberPress" prefWidth="40"  prefHeight="30" style="-fx-background-color: lightgrey "/>
+        </HBox>
+        <Button text="-" font="$FONT" onAction="#OperatorPress" prefWidth="40"  prefHeight="30" style="-fx-background-color:mediumaquamarine"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <HBox spacing="5">
+        <Button text="1" font="$FONT" onAction="#NumberPress" prefWidth="40"  prefHeight="30" style="-fx-background-color: lightgrey"/>
+        <Button text="2" font="$FONT" onAction="#NumberPress" prefWidth="40"  prefHeight="30" style="-fx-background-color: lightgrey"/>
+        <Button text="3" font="$FONT" onAction="#NumberPress" prefWidth="40"  prefHeight="30" style="-fx-background-color: lightgrey"/>
+        </HBox>
+        <Button text="+"  onAction="#OperatorPress" prefWidth="40"  prefHeight="30" style="-fx-background-color:mediumaquamarine">
+        <font>
+            <Font size="15.5"/>
+        </font>
+        </Button>
+    </HBox>
+
+    <HBox spacing="10">
+        <HBox spacing="5">
+        <Button text="0" onAction="#NumberPress" font="$FONT" prefWidth="85"  prefHeight="30" style="-fx-background-color: lightgrey"/>
+        <Button text="." onAction="#NumberPress" font="$FONT" prefWidth="40"  prefHeight="30" style="-fx-background-color: lightgrey"/>
+        </HBox>
+        <Button text="=" onAction="#OperatorPress" prefWidth="40" font="$FONT" prefHeight="30" style="-fx-background-color: darkorange"/>
+    </HBox>
+</VBox>
